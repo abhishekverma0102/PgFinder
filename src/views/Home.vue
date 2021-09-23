@@ -45,14 +45,31 @@
 
     </v-card>
     
-    <v-container class="d-flex align-center flex-column">
+    <v-container class="d-flex align-center flex-column feature-container">
       <h1>Book your perfect accommodation</h1>
 <p>Take the hassle out of securing your student home for the best years of your life</p>
       <div class="booking">
-        <div class="column"><h3>Fast & Easy Bookings</h3><p>Time is money. Save both when you book with us.</p></div>
-        <div class="column"><h3>100% Verified Listings</h3><p>What you see is what you get. Our promise.</p></div>
-        <div class="column"><h3>Price-Match Guarantee</h3><p>Find a lower price and we'll match it. No questions asked.</p></div>
-        <div class="column"><h3>1-on-1 Expert Assistance</h3><p>Just one call away, we'll be there for you anytime.</p></div>
+        
+        <div class="column">
+          <div class="image-container">
+            <img class="feature-image" src="https://static-assets-amberstudent.imgix.net/images/home_page_icons/feature_icons/feature-1.svg" alt="column-feature">
+          </div>
+          <h3>Fast & Easy Bookings</h3><p>Time is money. Save both when you book with us.</p></div>
+        <div class="column">
+            <div class="image-container">
+            <img class="feature-image" src="https://static-assets-amberstudent.imgix.net/images/home_page_icons/feature_icons/feature-4.svg" alt="column-feature">
+          </div>
+          <h3>100% Verified Listings</h3><p>What you see is what you get. Our promise.</p></div>
+        <div class="column">
+           <div class="image-container">
+            <img class="feature-image" src="https://static-assets-amberstudent.imgix.net/images/home_page_icons/feature_icons/feature-3.svg" alt="column-feature">
+          </div>
+          <h3>Price-Match Guarantee</h3><p>Find a lower price and we'll match it. No questions asked.</p></div>
+        <div class="column">
+          <div class="image-container">
+            <img class="feature-image" src="https://static-assets-amberstudent.imgix.net/images/home_page_icons/feature_icons/feature-2.svg" alt="column-feature">
+          </div>
+          <h3>1-on-1 Expert Assistance</h3><p>Just one call away, we'll be there for you anytime.</p></div>
       </div>
     </v-container>
 
@@ -133,6 +150,20 @@ export default {
 }
 
 .column {
-  padding: 20px;
+  margin: 10px;
+  display: grid;
+  place-items: center;
+  text-align: center;
 }
+
+.feature-image{
+  height: 200px;
+}
+
+.feature-container{
+  width: 100%;
+  min-width: 100%;
+  padding: 20px 80px;
+}
+
 </style>
