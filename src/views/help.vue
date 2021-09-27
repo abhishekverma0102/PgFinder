@@ -8,7 +8,7 @@
         <h1 class="help-heading">Help</h1>
         <h2 class="help-subheading">Get answers to commonly asked Questions</h2>
         <div class="how-it-works-section">
-          <a href="/howitworks" class="how-it-works-link">Know how amberstudent works!</a>
+          <a href="/howitworks" class="how-it-works-link">Know how pgFinder works!<v-icon color="" large>mdi-lightbulb</v-icon></a>
         </div>
         </center>
     </div>
@@ -19,16 +19,23 @@
             <span ><a class="path" href="/">Home </a> &nbsp; <span> / </span> &nbsp; <a class="path" href="/help"> Help</a></span>
           </div>
           <div class="follow-right">
-            <p class="social-text"><b>Follow us on:</b></p>
+            <p class="social-text"><b>Follow us on:</b></p>&nbsp;
+            <v-icon color="pink" large>mdi-instagram</v-icon>&nbsp;
+            <v-icon color="purple" large>mdi-facebook</v-icon>&nbsp;
+            <v-icon color="blue" large>mdi-linkedin</v-icon>&nbsp;
+            <v-icon color="light-blue" large>mdi-twitter</v-icon>&nbsp;
+            <v-icon color="red" large>mdi-youtube</v-icon> 
           </div>
         </div>
       </div>
 
       <!--  -->
+<v-card>
 
-      <div class="wrapper">
+<div class="wrapper">
+  <v-card class="tlb-margin-40">
     <div class="sidebar">
-        <h2>Sidebar</h2>
+        <h2>pgFinder</h2>
         <ul>
             <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
             <li><a href="#"><i class="fas fa-user"></i>Profile</a></li>
@@ -44,6 +51,8 @@
           <a href="#"><i class="fab fa-instagram"></i></a>
       </div>
     </div>
+    </v-card>
+    <v-card class="margin-all-40">
     <div class="main_content">
         <div class="header">Welcome!! Have a nice day.</div>  
         <div class="info">
@@ -52,7 +61,9 @@
           <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sed nobis ut exercitationem atque accusamus sit natus officiis totam blanditiis at eum nemo, nulla et quae eius culpa eveniet voluptatibus repellat illum tenetur, facilis porro. Quae fuga odio perferendis itaque alias sint, beatae non maiores magnam ad, veniam tenetur atque ea exercitationem earum eveniet totam ipsam magni tempora aliquid ullam possimus? Tempora nobis facere porro, praesentium magnam provident accusamus temporibus! Repellendus harum veritatis itaque molestias repudiandae ea corporis maiores non obcaecati libero, unde ipsum consequuntur aut consectetur culpa magni omnis vero odio suscipit vitae dolor quod dignissimos perferendis eos? Consequuntur!</div>
       </div>
     </div>
+    </v-card>
 </div>
+</v-card>
       <!--  -->
       
     <Footer/>
@@ -79,6 +90,7 @@ export default {
    no-repeat center center;
    background-color: #000000 !important;
     background-size: cover;
+    
     /* margin: 60px 0 0; */
     padding: 100px 0 60px;
     position: relative;
@@ -122,6 +134,7 @@ a.how-it-works-link:hover{
     border-bottom: 1px solid #e7e7e7;
     min-height: 62px;
     padding: 15px 0;
+    margin: 0 40px;
     height: 100%;
 }
 .follow-us-2{
@@ -146,6 +159,11 @@ display: flex;
 }
 .social-text{
   float: left!important;
+  line-height: 35px;
+
+}
+.v-application p.social-text{
+  margin: 0;
 }
 
 /*  */
@@ -172,27 +190,27 @@ body{
 .wrapper .sidebar{
   width: 200px;
   height: 100%;
-  background: #4b4276;
+  background: #ffffff;
   padding: 30px 0px;
-  position: fixed;
+  /* position: fixed; */
 }
 
 .wrapper .sidebar h2{
-  color: #fff;
-  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+  /* text-transform: uppercase; */
   text-align: center;
   margin-bottom: 30px;
 }
 
 .wrapper .sidebar ul li{
-  padding: 15px;
-  border-bottom: 1px solid #bdb8d7;
+  padding: 5px;
+  border-bottom: 1px solid #000000;
   border-bottom: 1px solid rgba(0,0,0,0.05);
   border-top: 1px solid rgba(255,255,255,0.05);
 }    
 
 .wrapper .sidebar ul li a{
-  color: #bdb8d7;
+  color: #000000;
   display: block;
 }
 
@@ -201,37 +219,37 @@ body{
 }
 
 .wrapper .sidebar ul li:hover{
-  background-color: #594f8d;
+  background-color: #f1ecec;
 }
     
 .wrapper .sidebar ul li:hover a{
-  color: #fff;
+  color: rgb(0, 0, 0);
 }
  
 .wrapper .sidebar .social_media{
-  position: absolute;
+  /* position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%); */
   display: flex;
 }
 
 .wrapper .sidebar .social_media a{
   display: block;
   width: 40px;
-  background: #594f8d;
+  background: #ffffff;
   height: 40px;
   line-height: 45px;
   text-align: center;
   margin: 0 5px;
-  color: #bdb8d7;
+  color: #000000;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
 
 .wrapper .main_content{
   width: 100%;
-  margin-left: 200px;
+  /* margin-left: 200px; */
 }
 
 .wrapper .main_content .header{
@@ -251,10 +269,24 @@ body{
   margin-bottom: 20px;
 }
 
+.v-application .info{
+  background-color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
 @media (max-height: 500px){
   .social_media{
     display: none !important;
   }
+}
+.social_media{
+  display: flex;
+}
+.margin-all-40{
+  margin: 40px;
+}
+.tlb-margin-40{
+  margin: 40px 0 40px 40px;
 }
 /*  */
 

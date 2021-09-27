@@ -71,7 +71,11 @@
 
 <script>
 export default {
-    
+    methods:{
+      geocode(){
+        console.log("keelu ");
+      }
+    }
 }
 </script>
 

@@ -14,8 +14,18 @@
               your student accommodation near top universities across the globe
             </p>
             <div class="search-bar">
-              <v-combobox solo hide-details="auto" v-modal="address"></v-combobox>
-              <v-btn dark x-large color="red" href="/search"
+              <v-text-field
+                solo
+                hide-details="auto"
+                v-model="address"
+            clearable
+              ></v-text-field>
+              <v-btn
+                dark
+                x-large
+                color="red"
+                
+                @click="redirectSearch"
                 ><v-icon>mdi-magnify</v-icon>search</v-btn
               >
             </div>
@@ -193,9 +203,20 @@ import Footer from "../components/Footer.vue";
 
 export default {
   data() {
-    return{
-      address:""
-    }
+    return {
+      items: [],
+      address: [],
+    };
+  },
+  methods: {
+    redirectSearch() {
+      console.log(this.address);
+      this.$router.push({
+        name: "SearchPage",
+        params: { address: this.address },
+      });
+      // this.$router.push(`/search?${this.address}`)
+    },
   },
   name: "Home",
 
@@ -303,6 +324,4 @@ export default {
   padding: 80px;
   background-color: #fafafa;
 }
-
-
 </style>

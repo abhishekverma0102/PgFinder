@@ -4,34 +4,42 @@
     <v-card>
       <div class="pg-data">
         <div class="col col1">
-          <div>
-            <h3>Student housing</h3>
-            <p>found __ places</p>
-          </div>
-
+          <v-card class="card">
+            <div class="places-found"> 
+              <p>India / _____</p>
+              <h3>Student housing</h3>
+              <p>found __ places</p>
+            </div>
+          </v-card>
           <div class="found-places">
-            <v-card>
-            <div class="right-p-40">
-              <v-btn block color="white" class="login-btn">
-              <span class="color-fff">Blog</span>
-            </v-btn>
-             <v-btn block color="white" class="login-btn">
-              <span class="color-fff">Call</span>
-            </v-btn>
-            <v-btn block color="white" class="login-btn">
-              <span class="color-fff">Support</span>
-            </v-btn>
-            </div>
+            <v-card class="card">
+              <div class="right-p-40">
+                <v-btn block color="white" class="login-btn">
+                  <span class="mdi mdi-access-point"></span>
+
+                  <span class="color-fff">Blog</span>
+                </v-btn>
+                <v-btn block color="white" class="login-btn">
+                  <span class="mdi mdi-cellphone"></span>
+
+                  <span class="color-fff">Call</span>
+                </v-btn>
+                <v-btn block color="white" class="login-btn">
+                  <span class="mdi mdi-chart-arc"></span>
+
+                  <span class="color-fff">Support</span>
+                </v-btn>
+              </div>
             </v-card>
-            <v-card>
-            <div class="places">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
-                odit temporibus, explicabo labore asperiores quas aperiam, dicta
-                tenetur hic repellendus quis est qui necessitatibus? Nulla,
-                dignissimos. Exercitationem sit sed expedita.
-              </p>
-            </div>
+            <v-card class="card">
+              <div class="places">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
+                  odit temporibus, explicabo labore asperiores quas aperiam,
+                  dicta tenetur hic repellendus quis est qui necessitatibus?
+                  Nulla, dignissimos. Exercitationem sit sed expedita.
+                </p>
+              </div>
             </v-card>
           </div>
         </div>
@@ -70,8 +78,11 @@ import Navbar from "../components/Navbar.vue";
 import Footer from "../components/Footer.vue";
 
 export default {
+  
   data() {
     return {
+      
+      
       headers: [
         {
           text: "Name",
@@ -84,7 +95,7 @@ export default {
         { text: "Website", value: "website" },
         { text: "Phone no.", value: "formatted_phone_number" },
       ],
-      address: "",
+      address:this.$route.params.address,
       searchResult: null,
       showTable: false,
     };
@@ -98,10 +109,17 @@ export default {
       this.showTable = true;
     },
   },
+
   components: {
     Navbar,
     Footer,
   },
+  async mounted(){
+    await this.showAddress()
+    console.log(this.searchResult)
+
+  }
+
 };
 </script>
 
@@ -118,24 +136,31 @@ export default {
 
 .col1 {
   display: grid;
-  grid-template-rows: 100px auto;
+  grid-template-rows: 150px auto;
 }
-.right-p-40{
+.right-p-40 {
   padding-right: 40px;
 }
 
 .found-places {
   display: grid;
-  grid-template-columns: 300px auto;
+  grid-template-columns: 200px auto;
 }
 
-.places{
+.places-found {
+  padding: 20px;
+}
+.places {
   padding: 20px;
 }
 
 .login-btn {
   margin: 20px;
   max-width: 80%;
+  text-align: left;
   /* overflow:hidden !important; */
+}
+span.v-btn__content {
+  justify-content: left !important;
 }
 </style>
