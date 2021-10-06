@@ -1,5 +1,7 @@
 # pgfinder
 
+![alt text](http://url/to/img.png)
+
 ## Project setup
 ```
 npm install
