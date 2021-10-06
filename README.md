@@ -1,6 +1,13 @@
 # pgfinder
 
-![alt text](http://url/to/img.png)
+##Home page
+![alt text](https://github.com/abhishekverma0102/PgFinder/blob/master/img/home.png)
+##Login page
+![alt text](https://github.com/abhishekverma0102/PgFinder/blob/master/img/login.png)
+##Footer
+![alt text](https://github.com/abhishekverma0102/PgFinder/blob/master/img/footer.png)
+##Help page
+![alt text](https://github.com/abhishekverma0102/PgFinder/blob/master/img/help.png)
 
 ## Project setup
 ```
